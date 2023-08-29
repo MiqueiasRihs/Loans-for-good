@@ -1,0 +1,42 @@
+version: '3'
+services:
+  api:
+    container_name: "api"
+    command: ./setup_dev.sh
+    build:
+      context: ./api
+    volumes:
+      - ./api:/home/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DJANGO_SETTINGS_MODULE=loans_for_good.settings
+      - DJANGO_SUPERUSER_PASSWORD
+      - DJANGO_SUPERUSER_EMAIL
+      - DJANGO_SUPERUSER_USERNAME
+    tty: true
+    stdin_open: true
+    networks:
+      - digitalsys_network
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - digitalsys_network
+
+  front-end:
+    container_name: front-end
+    build:
+      context: ./front-end
+    volumes:
+      - ./front-end:/home/app
+    ports:
+      - 3000:3000
+    networks:
+      - digitalsys_network
+
+networks:
+  digitalsys_network:
