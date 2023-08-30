@@ -36,6 +36,6 @@ Este método retorna uma lista de campos para serem exibidos e preenchidos no fr
 
 ## Testes
 
-Os testes unitários são realizados no momento em que o contêiner sobe, mas para serem realizados no momento de desenvolvimento, você pode:
+Os testes unitários são realizados no momento em que o contêiner sobe, mas para rodar os testes no momento de desenvolvimento, você pode:
 
 1. No terminal rodar o comando `pytest`.
