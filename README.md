@@ -2,7 +2,7 @@
 
 # Loans For Good
 
-Este é um projeto proposto pela DigitalSys, tem como o objetivo a criação de um API para análise e concessão de crédito feita com Django, Postgresql e Celery no back-end e React no front-end.
+Este é um projeto proposto pela DigitalSys, tem como o objetivo a criação de um API para análise e concessão de crédito feita com Django, Postgresql, Redis e Celery no back-end e React no front-end.
 
 Neste repositório encontra-se submódulos tanto do [back-end](https://github.com/MiqueiasRihs/digitalsys-code-challenge/tree/cae12d135f1e466ad1a67e86bfb7888e7ae6e004) quanto do [front-end](https://github.com/MiqueiasRihs/digitalsys-code-challenge-front-end/tree/84f7811ff504b932ec190a4fbc6bdb692910a770), foi feito dessa forma para que ficasse mais fácil de subir todo o sistema com apenas um `docker-compose up`, mas o código de cada parte pode ser encontrada em seus respectivos repositórios.
 
